@@ -9,7 +9,6 @@ import {
   Facebook,
   Globe,
   GraduationCap,
-  HeartPulse,
   Instagram,
   Linkedin,
   Mail,
@@ -228,7 +227,7 @@ function HeroImage() {
 
   if (failed) {
     return (
-      <div className="relative h-full min-h-[560px] w-full overflow-hidden rounded-[2rem] bg-[radial-gradient(circle_at_top_left,rgba(56,189,248,.35),transparent_28%),radial-gradient(circle_at_top_right,rgba(59,130,246,.22),transparent_28%),linear-gradient(135deg,#06152e_0%,#0f2f63_45%,#0b4f88_100%)]">
+      <div className="relative h-full min-h-[340px] w-full overflow-hidden rounded-[2rem] bg-[radial-gradient(circle_at_top_left,rgba(56,189,248,.35),transparent_28%),radial-gradient(circle_at_top_right,rgba(59,130,246,.22),transparent_28%),linear-gradient(135deg,#06152e_0%,#0f2f63_45%,#0b4f88_100%)] sm:min-h-[420px] lg:min-h-[560px]">
         <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,0))]" />
         <div className="absolute -left-10 top-16 h-56 w-56 rounded-full bg-cyan-400/20 blur-3xl" />
         <div className="absolute right-0 top-0 h-72 w-72 rounded-full bg-blue-500/20 blur-3xl" />
@@ -238,7 +237,7 @@ function HeroImage() {
   }
 
   return (
-    <div className="relative h-full min-h-[560px] w-full overflow-hidden rounded-[2rem]">
+    <div className="relative h-full min-h-[340px] w-full overflow-hidden rounded-[2rem] sm:min-h-[420px] lg:min-h-[560px]">
       <Image src="/hero/hero.png" alt="Malisha Group hero" fill className="object-cover" onError={() => setFailed(true)} />
       <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(4,15,37,.78)_0%,rgba(5,33,73,.45)_42%,rgba(7,35,82,.25)_100%)]" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(56,189,248,.18),transparent_26%),radial-gradient(circle_at_bottom_right,rgba(59,130,246,.18),transparent_24%)]" />
@@ -316,24 +315,25 @@ function QRDisplay({ file }: { file: string }) {
 
 function HeroOverlayCards() {
   return (
-    <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
+    <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2">
       {brands.map((brand) => (
         <a
           key={brand.id}
           href={brand.website}
-          className="group rounded-[1.6rem] border border-white/12 bg-white/10 p-4 backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:bg-white/14"
+          className="group overflow-hidden rounded-[1.3rem] border border-slate-200 bg-white p-4 shadow-[0_18px_45px_-35px_rgba(15,23,42,.4)] transition duration-300 hover:-translate-y-1"
         >
+          <div className={`-mx-4 -mt-4 mb-3 h-1.5 bg-gradient-to-r ${brand.accent}`} />
           <div className="flex items-start justify-between gap-3">
-            <div className="rounded-2xl bg-white/95 p-2.5 shadow-lg shadow-slate-950/20">
-              <LogoImage src={brand.logo} alt={brand.name} size="sm" />
+            <div className="rounded-2xl border border-slate-200 bg-slate-50 p-2.5">
+              <LogoImage src={brand.logo} alt={brand.name} size="md" />
             </div>
-            <div className={`flex h-11 w-11 items-center justify-center rounded-2xl bg-gradient-to-br ${brand.accent} shadow-lg shadow-cyan-950/20`}>
+            <div className={`flex h-11 w-11 items-center justify-center rounded-2xl bg-gradient-to-br ${brand.accent} shadow-lg shadow-slate-300`}>
               <brand.icon className="h-5 w-5 text-white" />
             </div>
           </div>
-          <h3 className="mt-4 text-lg font-semibold text-white">{brand.name}</h3>
-          <p className="mt-1 text-sm leading-6 text-white/78">{brand.short}</p>
-          <div className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-cyan-200 group-hover:text-white">
+          <h3 className="mt-3 text-2xl font-semibold text-slate-900">{brand.name}</h3>
+          <p className="mt-1 text-base leading-6 text-slate-600">{brand.short}</p>
+          <div className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-sky-700 group-hover:text-sky-800">
             Explore <ArrowRight className="h-4 w-4" />
           </div>
         </a>
@@ -345,7 +345,7 @@ function HeroOverlayCards() {
 function TopBar() {
   return (
     <div className="relative z-30 border-b border-white/10 bg-[#07152e]/85 backdrop-blur-xl">
-      <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-3 px-4 py-2.5 text-sm text-slate-200 sm:px-6 lg:px-8">
+      <div className="mx-auto flex max-w-[1600px] flex-wrap items-center justify-between gap-3 px-4 py-2.5 text-sm text-slate-200 sm:px-6 lg:px-8">
         <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
           <a href="tel:+8618989410063" className="inline-flex items-center gap-2 hover:text-white">
             <Phone className="h-4 w-4 text-cyan-300" />
@@ -381,9 +381,9 @@ function TopBar() {
 function FloatingNav() {
   return (
     <div className="absolute inset-x-0 top-0 z-20">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 pt-5 sm:px-6 lg:px-8 lg:pt-7">
+      <div className="mx-auto flex max-w-[1600px] items-center justify-between px-4 pt-5 sm:px-6 lg:px-8 lg:pt-7">
         <div className="rounded-full border border-white/12 bg-white/10 px-4 py-2 backdrop-blur-xl shadow-2xl shadow-slate-950/25">
-          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-cyan-100">Malisha Group</p>
+          <p className="text-sm font-bold uppercase tracking-[0.24em] text-yellow-300">Malisha Group</p>
         </div>
         <div className="hidden items-center gap-2 md:flex">
           <a href="#companies" className="rounded-full border border-white/12 bg-white/10 px-4 py-2 text-sm font-semibold text-white backdrop-blur-xl transition hover:bg-white/16">
@@ -403,11 +403,11 @@ function FloatingNav() {
 
 function HeroSection() {
   return (
-    <section className="relative overflow-hidden bg-[#061327] pb-12">
+    <section className="relative overflow-hidden bg-[#061327] pb-12 pt-14 sm:pt-16 lg:pt-0">
       <FloatingNav />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(34,211,238,.18),transparent_24%),radial-gradient(circle_at_top_right,rgba(96,165,250,.16),transparent_26%),linear-gradient(180deg,#061327_0%,#081a38_52%,#0b1f45_100%)]" />
-      <div className="relative mx-auto grid min-h-[760px] max-w-[1600px] items-stretch lg:grid-cols-[1.12fr_.88fr]">
-        <div className="order-2 flex items-center px-4 pb-10 pt-8 sm:px-6 lg:order-1 lg:px-10 lg:pb-16 lg:pt-28 xl:px-16">
+      <div className="relative mx-auto grid min-h-0 max-w-[1600px] items-stretch lg:min-h-[760px] lg:grid-cols-[1.12fr_.88fr]">
+        <div className="order-2 flex items-start px-4 pb-10 pt-8 sm:px-6 lg:order-1 lg:items-center lg:px-10 lg:pb-16 lg:pt-28 xl:px-16">
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 rounded-full border border-cyan-300/20 bg-cyan-300/10 px-4 py-1.5 text-[11px] font-semibold uppercase tracking-[0.3em] text-cyan-100 backdrop-blur-xl">
               <Sparkles className="h-3.5 w-3.5" />
@@ -453,14 +453,22 @@ function HeroSection() {
           </div>
         </div>
 
-        <div className="order-1 relative lg:order-2">
-          <HeroImage />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(6,19,39,0),rgba(6,19,39,.32)_46%,rgba(6,19,39,.55)_100%)]" />
-          <div className="absolute bottom-5 left-4 right-4 sm:bottom-8 sm:left-6 sm:right-6 lg:bottom-10 lg:left-8 lg:right-8">
-            <div className="mb-4 inline-flex rounded-full bg-white/92 px-4 py-2 shadow-lg shadow-slate-950/20 backdrop-blur-xl">
-              <p className="font-[var(--font-display)] text-lg text-slate-950 sm:text-2xl">Malisha Group is your bridge to China</p>
-            </div>
+        <div className="order-1 relative pb-4 lg:order-2 lg:pb-0">
+          <div className="relative z-10 px-4 pt-4 sm:px-6 lg:hidden">
             <HeroOverlayCards />
+            <div className="mt-3 inline-flex rounded-full px-4 py-2 shadow-lg shadow-slate-950/20 backdrop-blur-xl">
+              <p className="font-[var(--font-display)] text-lg text-white sm:text-2xl">Malisha Group - your bridge to China</p>
+            </div>
+          </div>
+          <div className="hidden lg:block">
+            <HeroImage />
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(6,19,39,0),rgba(6,19,39,.32)_46%,rgba(6,19,39,.55)_100%)]" />
+          </div>
+          <div className="hidden lg:absolute lg:bottom-8 lg:left-8 lg:right-8 lg:z-10 lg:block">
+            <HeroOverlayCards />
+          </div>
+          <div className="hidden lg:absolute lg:top-20 lg:left-8 lg:right-8 lg:z-10 lg:inline-flex lg:rounded-full lg:px-4 lg:py-2 lg:shadow-lg lg:shadow-slate-950/20 lg:backdrop-blur-xl">
+            <p className="font-[var(--font-display)] text-lg text-white sm:text-2xl">Malisha Group - your bridge to China</p>
           </div>
         </div>
       </div>
@@ -502,39 +510,6 @@ function BrandVisual({ brand }: { brand: Brand }) {
           ))}
         </div>
       </div>
-    </div>
-  );
-}
-
-function MapCard({ brand }: { brand: Brand }) {
-  const query = encodeURIComponent(brand.mapQuery);
-  const src = `https://maps.google.com/maps?width=100%25&height=100%25&hl=en&q=${query}&t=&z=14&ie=UTF8&iwloc=B&output=embed`;
-
-  return (
-    <div className="overflow-hidden rounded-[1.6rem] border border-slate-200 bg-white shadow-sm">
-      <div className="flex items-center justify-between border-b border-slate-200 px-4 py-3">
-        <div>
-          <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-sky-700">Location</p>
-          <p className="mt-1 text-sm font-medium text-slate-700">Office / service area map</p>
-        </div>
-        <MapPin className="h-5 w-5 text-sky-600" />
-      </div>
-      <iframe
-        title={`${brand.name} map`}
-        src={src}
-        className="h-[250px] w-full bg-slate-100"
-        loading="lazy"
-        referrerPolicy="no-referrer-when-downgrade"
-      />
-      <a
-        href={`https://www.google.com/maps/search/?api=1&query=${query}`}
-        target="_blank"
-        rel="noreferrer"
-        className="flex items-center justify-center gap-2 border-t border-slate-200 px-4 py-3 text-sm font-semibold text-sky-700 transition hover:bg-sky-50"
-      >
-        Open in Google Maps
-        <ArrowUpRight className="h-4 w-4" />
-      </a>
     </div>
   );
 }
@@ -617,7 +592,7 @@ function LeadershipSection() {
             <article
               key={video.videoId}
               className={`overflow-hidden rounded-[2rem] border border-slate-200 bg-white shadow-[0_30px_80px_-40px_rgba(15,23,42,.28)] ${
-                idx === 0 ? "" : "lg:translate-y-8"
+                idx === 0 ? "" : ""
               }`}
             >
               <div className="bg-[linear-gradient(135deg,#07152e_0%,#0a2a5c_58%,#0f4d91_100%)] p-6 text-white">
