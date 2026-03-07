@@ -126,7 +126,7 @@ const brands: Brand[] = [
     logo: "/logos/AL-Barakah.png",
     phone: ["+86 19128630063", "+88 01929-732131"],
     emailPlaceholder: "Facebook / WhatsApp contact",
-    address: "Near Metro Line 2, Sanyuanli Station, Exit C2, Guangzhou",
+    address: "Near Metro Line 2, Sanyuanli Station, Exit C2, Guangzhou, China",
     mapQuery: "Sanyuanli Station Exit C2, Guangzhou, China",
     qrName: "al-barakah.png",
     accent: "from-amber-400 via-orange-500 to-rose-500",
