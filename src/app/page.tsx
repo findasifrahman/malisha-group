@@ -711,7 +711,7 @@ function Footer() {
 
         <div className="mt-10 flex flex-col gap-3 border-t border-white/10 pt-6 text-sm text-slate-400 sm:flex-row sm:items-center sm:justify-between">
           <p>© 2026 Malisha Group. All rights reserved.</p>
-          <p>Designed for a premium Vercel-hosted landing experience.</p>
+          <p>Designed By www.asifrahman.info</p>
         </div>
       </div>
     </footer>
