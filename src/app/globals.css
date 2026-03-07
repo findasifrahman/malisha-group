@@ -1,25 +1,24 @@
 @import "tailwindcss";
 
 :root {
-  --background: #020617;
-  --foreground: #e2e8f0;
+  --background: #ffffff;
+  --foreground: #0b1f3f;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-manrope);
-  --font-display: var(--font-playfair);
+  --font-display: var(--font-sora);
 }
 
 body {
   color: var(--foreground);
   font-family: var(--font-manrope), sans-serif;
   background:
-    radial-gradient(circle at 12% 15%, rgba(56, 189, 248, 0.3), transparent 30%),
-    radial-gradient(circle at 85% 10%, rgba(16, 185, 129, 0.24), transparent 34%),
-    radial-gradient(circle at 75% 75%, rgba(251, 191, 36, 0.16), transparent 35%),
-    linear-gradient(180deg, #020617, #0f172a);
+    radial-gradient(circle at 9% 14%, rgba(37, 99, 235, 0.1), transparent 28%),
+    radial-gradient(circle at 88% 18%, rgba(249, 115, 22, 0.08), transparent 30%),
+    #ffffff;
   min-height: 100vh;
 }
 
@@ -37,15 +36,15 @@ body {
   }
 
   .glass-card {
-    @apply rounded-3xl border border-white/20 bg-white/10 shadow-[0_30px_80px_-45px_rgba(56,189,248,0.7)] backdrop-blur-xl;
+    @apply rounded-3xl border border-white/85 bg-white/95 shadow-[0_24px_80px_-38px_rgba(15,23,42,0.3)] backdrop-blur-xl;
   }
 
   .glow-divider {
-    @apply mx-auto h-px w-full max-w-7xl bg-gradient-to-r from-transparent via-cyan-300/45 to-transparent;
+    @apply mx-auto h-px w-full max-w-7xl bg-gradient-to-r from-transparent via-blue-300/60 to-orange-300/60;
   }
 
   .title-gradient {
-    @apply bg-gradient-to-r from-cyan-200 via-sky-100 to-emerald-200 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-blue-700 via-cyan-500 to-orange-500 bg-clip-text text-transparent;
   }
 
   .ambient-orb {

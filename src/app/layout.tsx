@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Manrope, Playfair_Display } from "next/font/google";
+import { Manrope, Sora } from "next/font/google";
 import "./globals.css";
 
 const manrope = Manrope({
@@ -7,8 +7,8 @@ const manrope = Manrope({
   subsets: ["latin"],
 });
 
-const playfair = Playfair_Display({
-  variable: "--font-playfair",
+const sora = Sora({
+  variable: "--font-sora",
   subsets: ["latin"],
 });
 
@@ -25,7 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${manrope.variable} ${playfair.variable} antialiased`}>
+      <body className={`${manrope.variable} ${sora.variable} antialiased`}>
         {children}
       </body>
     </html>
