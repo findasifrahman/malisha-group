@@ -320,7 +320,7 @@ function HeroOverlayCards() {
       {brands.map((brand) => (
         <a
           key={brand.id}
-          href={`#${brand.id}`}
+          href={brand.website}
           className="group rounded-[1.6rem] border border-white/12 bg-white/10 p-4 backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:bg-white/14"
         >
           <div className="flex items-start justify-between gap-3">
