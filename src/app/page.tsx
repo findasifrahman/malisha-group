@@ -465,7 +465,7 @@ function HeroSection() {
 
             <div className="absolute left-5 top-5 inline-flex items-center gap-2 rounded-full border border-white/30 bg-white px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.28em] text-red-700 shadow-lg">
               <span className="h-2 w-2 rounded-full bg-red-600" />
-              Chairman portrait
+              Chairman
             </div>
 
             <div className="absolute right-5 top-5 flex flex-col gap-2">
@@ -491,9 +491,9 @@ function HeroSection() {
 
             <div className="absolute left-5 right-5 bottom-5">
               <div className="rounded-[1.5rem] border border-white/15 bg-white/12 p-4 backdrop-blur-xl">
-                <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-rose-100">Malisha Group</p>
+                <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-rose-100">Sheikh Korban Ali</p>
                 <p className="mt-2 max-w-xl font-[var(--font-display)] text-2xl leading-tight text-white sm:text-3xl">
-                  Member of BNI China
+                  Member of BNI 
                 </p>
               </div>
             </div>
@@ -527,7 +527,7 @@ function ManagingDirectorSection() {
         <SectionHeading
           eyebrow="Managing Director"
           title="Steady operations, sharper delivery"
-          note="A cleaner message card sits beside the portrait on desktop and stacks naturally on mobile."
+          note=""
         />
 
         <div className="mt-10 grid gap-6 lg:grid-cols-[1.05fr_.95fr] lg:items-stretch">
