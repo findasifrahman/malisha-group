@@ -663,7 +663,7 @@ function OverviewSection() {
         <SectionHeading
           eyebrow="Group overview"
           title="Five brands, one elevated identity"
-          note="The cards below use a balanced 2-over-3 desktop rhythm so the five companies feel intentional instead of squeezed."
+          note=""
         />
         <div className="mt-10">
           <BalancedBrandGrid variant="light" />
