@@ -56,8 +56,8 @@ const brands: Brand[] = [
   {
     id: "malishaedu",
     name: "MalishaEdu",
-    short: "Education Pathways",
-    oneLiner: "Admissions, scholarships, and student guidance for studying in China.",
+    short: "Education Consulting & Support in china",
+    oneLiner: "Admissions, scholarships, and student guidance for Higher study in China.",
     focus:
       "We guide students from application to arrival with premium support across admissions, scholarship planning, visa direction, and on-ground orientation.",
     website: "https://malishaedu.com",
@@ -84,7 +84,7 @@ const brands: Brand[] = [
   {
     id: "brhc",
     name: "BRHC",
-    short: "Healthcare Access",
+    short: "Midedical Tourism & Treatment Support in China",
     oneLiner: "Cross-border healthcare coordination and treatment support in China.",
     focus:
       "BRHC connects patients to trusted hospitals with language support, appointment coordination, case guidance, and a more organized treatment journey.",
@@ -117,7 +117,7 @@ const brands: Brand[] = [
   {
     id: "al-barakah",
     name: "AL-Barakah Restaurant",
-    short: "Hospitality & Community",
+    short: "Halal Dining in Guangzhou",
     oneLiner: "Halal comfort dining and warm hospitality in Guangzhou.",
     focus:
       "A welcoming halal dining destination built for students, families, visitors, and business travelers seeking trusted taste and community in Guangzhou.",
@@ -143,14 +143,14 @@ const brands: Brand[] = [
   {
     id: "easylink",
     name: "EasyLink",
-    short: "Business Expansion",
+    short: "Business setup and visa support in China",
     oneLiner: "Company setup, visa, tax, bookkeeping, and business consulting.",
     focus:
       "EasyLink enables market entry and operations in China with practical support across company formation, compliance, visa processing, accounting, and growth strategy.",
     website: "https://www.gzeasylink.com/",
     logo: "/logos/easylink.png",
-    phone: ["+86 18989410063"],
-    email: "info@easylinkchina.com",
+    phone: ["+86 13265980063"],
+    email: "info@malishagroup.com",
     address:
       "Room 13D, 13th Floor, Rongjian Building, No. 29, Construction Six Road, Yuexiu District, Guangzhou, China",
     mapQuery:
@@ -347,13 +347,13 @@ function TopBar() {
     <div className="relative z-30 border-b border-white/10 bg-[#07152e]/85 backdrop-blur-xl">
       <div className="mx-auto flex max-w-[1600px] flex-wrap items-center justify-between gap-3 px-4 py-2.5 text-sm text-slate-200 sm:px-6 lg:px-8">
         <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
-          <a href="tel:+8618989410063" className="inline-flex items-center gap-2 hover:text-white">
+          <a href="tel:+8613265980063" className="inline-flex items-center gap-2 hover:text-white">
             <Phone className="h-4 w-4 text-cyan-300" />
-            +86 18989410063
+            +86 13265980063
           </a>
-          <a href="mailto:info@easylinkchina.com" className="inline-flex items-center gap-2 hover:text-white">
+          <a href="mailto:info@malishagroup.com" className="inline-flex items-center gap-2 hover:text-white">
             <Mail className="h-4 w-4 text-cyan-300" />
-            info@easylinkchina.com
+            info@malishagroup.com
           </a>
         </div>
         <div className="flex items-center gap-2">
@@ -687,7 +687,7 @@ function Footer() {
             <div className="inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/8 px-4 py-2 backdrop-blur-xl">
               <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white text-sm font-bold text-slate-950">MG</div>
               <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.28em] text-cyan-200">Malisha Group</p>
+                <p className="text-xs font-semibold uppercase tracking-[0.28em] text-cyan-200">Malisha Group (info@malishagroup.com)</p>
                 <p className="mt-1 text-sm text-slate-300">Education • Healthcare • Hospitality • Business</p>
               </div>
             </div>
