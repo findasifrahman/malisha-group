@@ -86,13 +86,13 @@ const brands: Brand[] = [
     website: "https://www.chinahealthcare.center",
     logo: "/logos/brhc_2.png",
     phone: ["+86 15989054366", "+88 01332-511838"],
-    emailPlaceholder: "info@malishaedu.com",
+    emailPlaceholder: "info@chinahealthcare.com",
     address: "4th Floor (East Side), Praasad Trade Center, 6 Kemal Ataturk Avenue, Dhaka",
     qrName: "malishaedu_qr.jpg",
     accent: "from-rose-600 via-red-600 to-red-500",
     softAccent: "from-rose-50 via-white to-red-50",
     icon: Stethoscope,
-    bullets: ["Hospital matching", "Translation support", "Patient travel coordination"],
+    bullets: ["info@chinahealthcare.com","Hospital matching", "Translation support", "Patient travel coordination", ],
     socials: [
       { label: "Website", href: "https://www.chinahealthcare.center", icon: Globe },
       { label: "Facebook", href: "https://www.facebook.com/brcchealthcare", icon: Facebook },
@@ -857,6 +857,37 @@ function Footer() {
   );
 }
 
+function WhatsAppSticky() {
+  return (
+    <a
+      href="https://wa.me/8613265980063"
+      target="_blank"
+      rel="noreferrer"
+      aria-label="Chat on WhatsApp"
+      className="fixed bottom-5 right-5 z-50 inline-flex h-14 w-14 items-center justify-center rounded-full bg-transparent shadow-none transition hover:-translate-y-1 sm:bottom-6 sm:right-6 sm:h-16 sm:w-16"
+    >
+      <span className="flex h-11 w-11 items-center justify-center rounded-full bg-[#25D366] shadow-[0_8px_20px_rgba(37,211,102,0.32)] sm:h-12 sm:w-12">
+        <WhatsAppMark className="h-6 w-6 text-white sm:h-7 sm:w-7" />
+      </span>
+    </a>
+  );
+}
+
+function WhatsAppMark({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" className={className}>
+      <path
+        d="M12.004 2.25a9.75 9.75 0 0 0-8.54 14.48L2.25 21.75l5.17-1.18a9.75 9.75 0 1 0 4.584-18.32Zm0 17.5a7.72 7.72 0 0 1-3.94-1.08l-.28-.17-3.07.7.73-2.99-.18-.3A7.75 7.75 0 1 1 12 19.75Z"
+        fill="currentColor"
+      />
+      <path
+        d="M16.1 13.57c-.22-.11-1.29-.64-1.49-.72-.2-.08-.35-.11-.5.11-.15.22-.57.72-.7.87-.13.15-.26.17-.48.06-.22-.11-.94-.35-1.79-1.11-.66-.59-1.11-1.31-1.24-1.53-.13-.22-.01-.34.1-.45.1-.1.22-.26.33-.39.11-.13.15-.22.22-.37.07-.15.04-.28-.02-.39-.06-.11-.5-1.2-.69-1.64-.18-.43-.37-.37-.5-.37h-.43c-.15 0-.39.06-.59.28-.2.22-.77.75-.77 1.83 0 1.08.79 2.12.9 2.27.11.15 1.56 2.38 3.78 3.34.53.23.95.37 1.28.48.54.17 1.03.15 1.42.09.43-.06 1.29-.53 1.47-1.04.18-.51.18-.95.13-1.04-.06-.1-.2-.15-.42-.26Z"
+        fill="white"
+      />
+    </svg>
+  );
+}
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-[linear-gradient(180deg,#fff8f8_0%,#ffffff_16%,#fff5f5_58%,#fff0f0_100%)] text-slate-900">
@@ -868,6 +899,7 @@ export default function Home() {
       <CompaniesSection />
       <ContactGrid />
       <Footer />
+      <WhatsAppSticky />
     </main>
   );
 }
