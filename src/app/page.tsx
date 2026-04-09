@@ -67,7 +67,7 @@ const brands: Brand[] = [
     accent: "from-red-600 via-rose-600 to-red-700",
     softAccent: "from-red-50 via-white to-rose-50",
     icon: GraduationCap,
-    bullets: ["Scholarship guidance", "Admissions support", "Student onboarding in China"],
+    bullets: ["info@malishaedu.com","Scholarship guidance", "Admissions support", "Student onboarding in China"],
     socials: [
       { label: "Website", href: "https://malishaedu.com", icon: Globe },
       { label: "Facebook", href: "https://www.facebook.com/gz.malishaedu", icon: Facebook },
