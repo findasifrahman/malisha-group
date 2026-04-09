@@ -679,8 +679,8 @@ function CompaniesSection() {
       <div className="section-shell">
         <SectionHeading
           eyebrow="Our companies"
-          title="Brand stories with depth and polish"
-          note="Each company is presented with its logo, name, slogan, and direct website action."
+          title="Malishagroup Brand stories"
+          note=""
         />
         <div className="mt-10 space-y-6">
           {brands.map((brand, idx) => (
