@@ -62,7 +62,7 @@ const brands: Brand[] = [
     phone: ["+86 18613114366"],
     email: "info@malishaedu.com",
     address:
-      "Room 13D, 13th Floor, Rongjian Building, No. 29 Liuma / Construction Six Road, Yuexiu District, Guangzhou, China",
+      "Room 1510-1512, Guangdong International Building (Crowne Plaza Building), Huanshi Donglu 399, Yuexiu District, Guangzhou,China.",
     qrName: "malishaedu_qr.jpg",
     accent: "from-red-600 via-rose-600 to-red-700",
     softAccent: "from-red-50 via-white to-rose-50",
@@ -131,7 +131,7 @@ const brands: Brand[] = [
     phone: ["+86 13265980063"],
     email: "info@malishagroup.com",
     address:
-      "Room 13D, 13th Floor, Rongjian Building, No. 29, Construction Six Road, Yuexiu District, Guangzhou, China",
+      "Room 1510-1512, Guangdong International Building (Crowne Plaza Building), Huanshi Donglu 399, Yuexiu District, Guangzhou,China.",
     qrName: "malishaedu_qr.jpg",
     accent: "from-red-700 via-red-600 to-rose-600",
     softAccent: "from-red-50 via-white to-rose-50",
